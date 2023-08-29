@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <th:block th:each="car : ${cars}">
+        <h3 th:text="${car}"></h3>
+    </th:block>
+</div>
+
+<br/>
+
+<form method="GET" action="/cars">
+    <label for="count">Cars count</label>
+    <input name="count" type="text" id="count">
+    <input type="submit" value="Push it">
+</form>
+
+<br/>
+
+<a href="/"><h3>Main page</h3></a>
+</body>
+</html>
+</html>
